@@ -1,0 +1,134 @@
+/*primary css for pdf*/
+div.table-of-content > h1{
+	max-width: 80%;
+	width: 100%;
+	text-align: center;
+}
+div.table-of-content > table{
+	max-width: 80%;
+	width: 100%;
+}
+div.table-of-content table td h5 {
+    width: 50%;
+    display: inline-block;
+}
+div.table-of-content table td i {
+    /*display: inline-block;*/
+    border-bottom: 1px dotted #000;
+    height: 17px;
+    content: leader('.');
+    display: none;
+}
+div.table-of-content table td p {
+    display: inline-block;
+    width: 10%;
+}
+div.table-of-content table td {
+    padding-bottom: 15px;
+    width: 100%;
+    display: inline;
+}
+
+img{
+	max-width: 80%;
+}
+div.image
+.image-style-align-right img{
+	width: 50%;
+	max-width: 50%;
+	padding-left: 10px;
+	padding-right: 0;
+	float: right;
+}
+/*override css for print*/
+@media print{
+	div.table-of-content{
+		text-align: center;
+	}
+	div.table-of-content h1{
+		width: 953px;
+		display: normal;
+		font-size: 22px;
+		color: orange;
+		font-weight: 700;
+		text-align: center;
+	}
+	div.table-of-content table {
+		width: 953px;
+		display: normal;
+		height: auto;
+		text-align: center;
+	}
+	div.table-of-content table tbody td{
+		border: 1px solid #e2e2e2;
+		text-align: center;
+		width: 41.5%;
+	}
+	div.table-of-content *{
+		display: normal;
+		width: 953px;
+	}
+	p { 
+		font-size: 12px; 
+		max-width: 953px;
+		white-space: normal;
+		white-space-collapse: pre-servebreak;
+		word-break: break-all;
+		word-wrap: nowrap;
+	}
+	p > span.text-tiny{ font-size: 8px; }
+	p > span.text-small{ font-size: 10px; }
+	p > span.text-big{ font-size: 14px; }
+	p > span.text-huge{ font-size: 16px; }
+	div.image{
+		width: 953px;
+		height: auto;
+		padding-left: 0;
+		padding-right: 10px;
+		display: table;
+	}
+	div.image
+	.image-style-align-right{
+		width: 246px !important;
+		height: 246px !important;
+		padding-left: 10px;
+		padding-right: 0;
+		float: right;
+	}
+	img{
+		max-width: 50%;
+	}
+	div.image img{
+		width: auto;
+		display: normal;
+	}
+	.page-break {
+	    page-break-after: always;
+	}
+	
+
+	#toc_container {
+	    background: #f9f9f9 none repeat scroll 0 0;
+	    border: 1px solid #aaa;
+	    display: table;
+	    font-size: 100%;
+	    margin-bottom: 1em;
+	    padding: 20px;
+	    width: 953px;
+	}
+
+	.toc_title {
+	    font-weight: 700;
+	    text-align: center;
+	}
+
+	#toc_container li, #toc_container ul, #toc_container ul li{
+	    list-style: outside none none;
+	    list-style-type: none;
+	    width: 100%;
+	}
+
+	#toc_container ul li a:after {
+	    content: leader('.') target-counter(attr(href), page);
+	}
+}

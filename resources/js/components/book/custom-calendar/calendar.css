@@ -1,0 +1,79 @@
+.el-custom_calendar {
+    background: #F3F3F3;
+    height: 100%;
+}
+.el-custom_calendar .el-custom_calendar_title {
+    text-align: center;
+    padding: 5px;
+    background: #fff;
+}
+.el-custom_calendar .el-custom_calendar_title label {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+.el-custom_calendar .el-custom_calendar_body table.el-custom_calendar_table{
+	width: 100%;
+}
+.el-custom_calendar 
+.el-custom_calendar_body 
+table.el-custom_calendar_table
+thead{
+	
+}
+.el-custom_calendar 
+.el-custom_calendar_body 
+table.el-custom_calendar_table
+thead *{
+	padding: 5px;
+	text-align: center;
+	color: #e6a23c;
+    font-weight: normal;
+}
+.el-custom_calendar 
+.el-custom_calendar_body 
+table.el-custom_calendar_table{
+	background: #F3F3F3;
+}
+.el-custom_calendar 
+.el-custom_calendar_body 
+table.el-custom_calendar_table
+tbody tr td{
+	padding: 5px;
+	text-align: right;
+	border: 2px solid transparent;
+}
+table.el-custom_calendar_table
+tbody tr td span {
+	background: #fff;
+	display: block;
+}
+table.el-custom_calendar_table
+tbody tr td span.active{
+	background: #67c23a;
+}
+/*table.el-custom_calendar_table
+tbody tr td span.active:before{
+	content: "✔️";
+}*/
+
+i.icon-owned{
+    background: green;
+    border-radius: 100px;
+    width: 12px;
+    height: 12px;
+    display: block;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+i.icon-shared{
+    background: red;
+    border-radius: 100px;
+    width: 12px;
+    height: 12px;
+    display: block;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 3px;
+}
